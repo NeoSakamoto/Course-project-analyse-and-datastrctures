@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <chrono>
 
 using namespace std;
 
@@ -20,7 +21,7 @@ struct Car {
     }
 
     string GetInfo() const {
-        string status = isRented ? "�������" : "²����";
+        string status = isRented ? "ÇÀÉÍßÒÎ" : "Â²ËÜÍÎ";
         return to_string(id) + " | " + brand + " " + model + " (" + to_string(year) + ") - " + to_string(price) + "$ " + status;
     }
 };
@@ -73,15 +74,26 @@ public:
         return list;
     }
 
-    Car* Find(int id) {
+   Car* Find(int id) {
+        auto start = chrono::high_resolution_clock::now();
+
         Node* current = root;
+        Car* result = nullptr; 
+
         while (current != nullptr) {
             if (id == current->data.id) {
-                return &(current->data);
+                result = &(current->data); 
+                break; 
             }
             else if (id < current->data.id) current = current->left;
             else current = current->right;
         }
-        return nullptr;
+
+        auto end = chrono::high_resolution_clock::now();
+        chrono::duration<double, std::nano> duration = end - start;
+
+        cout << "ID: " << id << ". Час пошуку: " << duration.count() << " наносекунд." << endl;
+
+        return result;
     }
 };
