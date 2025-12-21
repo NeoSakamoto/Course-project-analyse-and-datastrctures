@@ -1,5 +1,8 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
+#include <iomanip>
+#include <sstream>
+#include <string>
 using namespace std;
 
 struct date {
@@ -8,13 +11,27 @@ struct date {
     int y;
 };
 
-struct car {
-    string RentnerName;
-    string RentnerSecName;
-    string Brand;
-    string Model;
-    date Rentstart;
-    date Rentfinish;
-};
+struct Car {
+    int id;
+    string brand;
+    string model;
+    int year;
+    double price;
+    bool isRented;
 
-void carinfo(car obj);
+    bool operator==(const Car& other) const {
+        return price == other.price;
+    }
+
+    Car(int _id = 0, string _b = "", string _m = "", int _y = 0, double _p = 0.0) {
+        id = _id; brand = _b; model = _m; year = _y; price = _p; isRented = false;
+    }
+
+    string GetInfo() const {
+        string status = isRented ? "АРЕНДОВАНА" : "НЕ АРЕНДОВАНА";
+
+        ostringstream oss;
+        oss << id << " | " << brand << " " << model << " (" << year << ") - " << fixed << setprecision(1) << price << "$ " << status;
+        return oss.str();
+    }
+};

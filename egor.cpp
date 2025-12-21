@@ -4,7 +4,7 @@
 
 struct CarPriceComparator {
     bool operator()(const Car& a, const Car& b) const {
-        return a.pricePerDay > b.pricePerDay;
+        return a.price > b.price;
     }
 };
 
