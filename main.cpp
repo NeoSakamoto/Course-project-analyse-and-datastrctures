@@ -9,10 +9,17 @@ int main()
 	SetConsoleOutputCP(1251);
 
 	vector<Car> cars;
+	HashTable hash;
+	List list;
 	string filename = "cars.txt";
 	InfofromFile(filename, cars);
 
-	for (Car car : cars) {
-		cout << car.GetInfo() << endl;
+	/*for (Car car : cars) {
+		hash.add(car);
 	}
+	hash.tableout();*/
+	for (Car car : cars) {
+		list.push_back(car);
+	}
+	list.nodeout();
 }

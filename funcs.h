@@ -16,7 +16,8 @@ public:
     bool isRented;
 
     bool operator==(const Car& other) const {
-        return price == other.price;
+        return id == other.id && brand == other.brand && model == other.model &&
+            year == other.year && price == other.price && isRented == other.isRented;
     }
 
     Car(int _id = 0, string _b = "", string _m = "", int _y = 0, double _p = 0.0) {
@@ -65,7 +66,32 @@ public:
     void resize();
     void add(const Car& car_);
     void remove(const Car& car_);
-    vector<Car> tableout();
+    void tableout();
 
     int hash_function(const Car& car, const int& n);
+};
+
+class List {
+    struct Node {
+        Car car;
+        Node* prev;
+        Node* next;
+    };
+    Node* head;
+    Node* tail;
+
+public:
+    List();
+    ~List();
+
+    size_t size;
+
+    void push_back(const Car& car);
+    void push_front(const Car& car);
+
+    void search(const Car& car);
+    void remove(const Car& car);
+
+    void nodeout();
+    void clear();
 };

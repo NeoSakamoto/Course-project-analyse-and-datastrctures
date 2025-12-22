@@ -48,7 +48,6 @@ HashTable::HashTable() {
         arr[i] = nullptr;
     }
 }
-
 HashTable::~HashTable() {
     for (int i = 0; i < buffer_size; i++) {
         Node* current = arr[i];
@@ -160,22 +159,108 @@ void HashTable::remove(const Car& car_) {
     sizewdeleted++;
 }
 
-vector<Car> HashTable::tableout() {
-    vector<Car> all;
-
+void HashTable::tableout() {
     for (int i = 0; i < buffer_size; i++) {
         Node* current = arr[i];
         while (current) {
             if (current->state == true) {
-                all.push_back(current->car);
+                cout << current->car.GetInfo() << endl;
             }
 
             current = current->next;
         }
     }
-    return all;
 }
 
 int HashTable::hash_function(const Car& car_, const int& n) {
     return car_.id % n;
+}
+
+List::List() : head(nullptr), tail(nullptr), size(0) {};
+List::~List() { clear(); };
+
+void List::push_back(const Car& car) {
+    if (size == 0) {
+        tail = head = new Node{ car, nullptr, nullptr };
+    }
+    else {
+        tail = tail->next = new Node{ car, tail, nullptr };
+    }
+    size++;
+}
+
+void List::push_front(const Car& car) {
+    if (size == 0) {
+        head = tail = new Node{ car, nullptr, nullptr };
+    }
+    else {
+        head = head->prev = new Node{ car, nullptr, head };
+    }
+    size++;
+}
+
+void List::remove(const Car& car) {
+    if (size == 0) {
+        cout << "Додайте спочатку хоча-б один елемент, щоб видаляти" << endl;
+        return;
+    }
+
+    Node* current = head;
+
+    while (current != nullptr && !(current->car == car)) {
+        current = current->next;
+    }
+
+    if (!current) cout << "Дані за вашим запитом не було знайдено у списку" << endl;
+
+    if (current == head) head = current->next;
+    if (current == tail) tail = current->prev;
+
+    if (current->prev) current->prev->next = current->next;
+    if (current->next) current->next->prev = current->prev;
+
+    delete current;
+    size--;
+}
+
+void List::search(const Car& car) {
+    if (size == 0) {
+        cout << "Нема серед чого шукати" << endl;
+        return;
+    }
+
+    Node* current = head;
+    int i = 0;
+
+    while (current != nullptr && !(current->car == car)) {
+        i++;
+        current = current->next;
+    }
+
+    if (current) cout << "Об'єкт знаходиться у списку під індексом #" << i << "." << endl;
+    else cout << "Об'єкт не було знайдено";
+}
+
+void List::clear() {
+    while (head != nullptr) {
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+    }
+    tail = nullptr;
+    size = 0;
+}
+
+void List::nodeout() {
+    if (size == 0) {
+        cout << "Список пустий, виводити нічого" << endl;
+        return;
+    }
+
+    Node* current = head;
+    while (current != nullptr) {
+        cout << current->car.GetInfo() << endl;
+        current = current->next;
+    }
+    delete current;
 }
