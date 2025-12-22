@@ -1,4 +1,5 @@
 #pragma once
+#include <funcs.h>
 #include <iostream>
 #include <vector>
 #include <string>
@@ -8,14 +9,6 @@
 #include <sstream>
 
 using namespace std;
-
-struct Car {
-    int id;
-    string brand;
-    string model;
-    int year;
-    double price;
-    bool isRented;
 
     Car() : id(0), year(0), price(0.0), isRented(false) {}
 
