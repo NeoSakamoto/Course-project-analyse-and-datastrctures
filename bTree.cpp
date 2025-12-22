@@ -14,11 +14,6 @@ using namespace std;
 
     Car(int _id, string _brand, string _model, int _year, double _price, bool _rented = false)
         : id(_id), brand(_brand), model(_model), year(_year), price(_price), isRented(_rented) {}
-
-    string ToString() const {
-        return to_string(id) + ";" + brand + ";" + model + ";" +
-               to_string(year) + ";" + to_string(price) + ";" + (isRented ? "1" : "0");
-    }
 };
 
 const int T = 3;

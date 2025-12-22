@@ -1,38 +1,42 @@
 #include "funcs.h"
 #include <iostream>
+#include <sstream>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 
-class HashTable {
-private:
-    struct Node {
+void InfofromFile(string& filename, vector<Car>& cars) {
+    ifstream file(filename);
+    if (!file.is_open()) return;
+
+    string line;
+
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string token;
         Car car;
 
-        bool state;
-        Node* next;
+        getline(ss, token, ';');
+        car.id = stoi(token);
 
-        Node(const Car& car_) : car(car_), state(true), next(nullptr) {};
-    };
-    Node** arr;
+        getline(ss, token, ';');
+        car.brand = token;
 
-    const int default_size = 10;
-    const double resize_cof = 0.75;
+        getline(ss, token, ';');
+        car.model = token;
 
-    int size; // усі елементи !ОКРІМ! Node -> state == false
-    int buffer_size; // розмір масиву Node
-    int sizewdeleted; // усі елементи !З! Node -> state == false
+        getline(ss, token, ';');
+        car.year = stoi(token);
 
-public:
-    HashTable();
-    ~HashTable();
+        getline(ss, token, ';');
+        car.price = stod(token);
 
-    void resize();
-    void add(const Car& car_);
-    void remove(const Car& car_);
-    vector<Car> tableout();
+        getline(ss, token, ';');
+        car.isRented = (token == "1");
 
-    int hash_function(const Car& car, const int& n);
-};
+        cars.push_back(car);
+    }
+}
 
 HashTable::HashTable() {
     buffer_size = default_size;
@@ -173,11 +177,5 @@ vector<Car> HashTable::tableout() {
 }
 
 int HashTable::hash_function(const Car& car_, const int& n) {
-    int i = 0;
-
-    /*for (int j = 0; somestr[j]; j++) {
-        i += somestr[j];
-    }*/
-
-    return i % n;
+    return car_.id % n;
 }
