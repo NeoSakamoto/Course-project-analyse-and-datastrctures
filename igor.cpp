@@ -171,25 +171,30 @@ void CarBTree::CollectDataRecursive(BTreeNode* node, vector<Car>& list) {
             if (!node->isLeaf) CollectDataRecursive(node->children[i], list);
             list.push_back(node->keys[i]);
         }
-        if (!node->isLeaf) CollectDataRecursive(node->children[i], list);
+        if (!node->isLeaf &&  i < node->children.size()) CollectDataRecursive(node->children[i], list);
     }
 }
 
 void CarBTree::SplitChild(BTreeNode* x, int i, BTreeNode* y) {
     BTreeNode* z = new BTreeNode(y->isLeaf);
 
-    for (int j = 0; j < T - 1; j++) z->keys.push_back(y->keys[j + T]);
+    Car midKey = y->keys[T - 1];
+
+    for (int j = 0; j < T - 1; j++)
+        z->keys.push_back(y->keys[j + T]);
 
     if (!y->isLeaf) {
-        for (int j = 0; j < T; j++) z->children.push_back(y->children[j + T]);
+        for (int j = 0; j < T; j++)
+            z->children.push_back(y->children[j + T]);
     }
 
     y->keys.resize(T - 1);
     if (!y->isLeaf) y->children.resize(T);
 
     x->children.insert(x->children.begin() + i + 1, z);
-    x->keys.insert(x->keys.begin() + i, y->keys[T - 1]);
+    x->keys.insert(x->keys.begin() + i, midKey);
 }
+
 
 void CarBTree::InsertNonFull(BTreeNode* node, Car k) {
     int i = node->keys.size() - 1;
