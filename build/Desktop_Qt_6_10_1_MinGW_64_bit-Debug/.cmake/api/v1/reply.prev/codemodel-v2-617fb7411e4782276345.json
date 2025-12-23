@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3f7611c3ed6f125b5a35.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Course-project-analyse-and-datastrctures",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Course-project-analyse-and-datastrctures::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Course-project-analyse-and-datastrctures-Debug-f1d168dca674252b0097.json",
+					"name" : "Course-project-analyse-and-datastrctures",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Course-project-analyse-and-datastrctures_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Course-project-analyse-and-datastrctures_autogen-Debug-1930c3c8f249d96bf8ca.json",
+					"name" : "Course-project-analyse-and-datastrctures_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Course-project-analyse-and-datastrctures_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Course-project-analyse-and-datastrctures_autogen_timestamp_deps-Debug-a13af6b6e767d75933fb.json",
+					"name" : "Course-project-analyse-and-datastrctures_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug",
+		"source" : "E:/VisualStudioRepos/Course-project-analyse-and-datastrctures"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

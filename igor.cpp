@@ -1,9 +1,7 @@
-#pragma once
 #include "funcs.h"
 #include <iostream>
 #include <vector>
 #include <string>
-#include <algorithm>
 #include <chrono>
 #include <fstream>
 #include <sstream>

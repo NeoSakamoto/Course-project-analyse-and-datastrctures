@@ -7,6 +7,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <QTreeWidget>
 using namespace std;
 
 class Car {
@@ -42,6 +43,8 @@ public:
 };
 
 void InfofromFile(string& filename, vector<Car>& cars);
+
+void Menu_Load(const string& filename, QTreeWidget* tree);
 
 // Andriy
 class HashTable {
