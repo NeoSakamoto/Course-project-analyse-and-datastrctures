@@ -18,8 +18,9 @@ int main()
 		hash.add(car);
 	}
 	hash.tableout();*/
-	for (Car car : cars) {
+
+	/*for (Car car : cars) {
 		list.push_back(car);
 	}
-	list.nodeout();
+	list.nodeout();*/
 }

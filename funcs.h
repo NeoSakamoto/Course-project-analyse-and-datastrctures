@@ -1,4 +1,7 @@
 ﻿#pragma once
+#ifndef FUNCS_H
+#define FUNCS_H
+
 #include <iostream>
 #include <iomanip>
 #include <sstream>
@@ -40,6 +43,7 @@ public:
 
 void InfofromFile(string& filename, vector<Car>& cars);
 
+// Andriy
 class HashTable {
 private:
     struct Node {
@@ -95,3 +99,73 @@ public:
     void nodeout();
     void clear();
 };
+
+// Ihor
+struct Node {
+    Car data;
+    Node* left;
+    Node* right;
+    Node(Car c);
+};
+
+class CarSearchTree {
+private:
+    Node* root;
+
+    Node* AddNodeRecursive(Node* node, Car c);
+    void CollectData(Node* node, vector<Car>& list);
+    void ClearMemory(Node* node);
+
+public:
+    CarSearchTree();
+    ~CarSearchTree();
+
+    void Insert(Car c);
+    vector<Car> GetList();
+    Car* Find(int id);
+
+    void SaveToFile(string filename);
+    void LoadFromFile(string filename);
+
+    bool RentCar(int id);
+    bool ReturnCar(int id);
+};
+
+const int T = 3;
+
+struct BTreeNode {
+    vector<Car> keys;
+    vector<BTreeNode*> children;
+    bool isLeaf;
+
+    BTreeNode(bool _leaf);
+};
+
+class CarBTree {
+private:
+    BTreeNode* root;
+
+    void ClearMemory(BTreeNode* node);
+    void CollectDataRecursive(BTreeNode* node, vector<Car>& list);
+    void SplitChild(BTreeNode* x, int i, BTreeNode* y);
+    void InsertNonFull(BTreeNode* node, Car k);
+    Car* SearchRecursive(BTreeNode* node, int id);
+
+public:
+    CarBTree();
+    ~CarBTree();
+
+    void Insert(Car k);
+    Car* Find(int id, double& timeTakenIds);
+    Car* Find(int id);
+
+    vector<Car> GetSortedList();
+
+    bool RentCar(int id);
+    bool ReturnCar(int id);
+
+    void SaveToFile(string filename);
+    void LoadFromFile(string filename);
+};
+
+#endif
