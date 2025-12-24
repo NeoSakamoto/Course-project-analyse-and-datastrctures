@@ -38,7 +38,7 @@ void InfofromFile(string& filename, vector<Car>& cars) {
     }
 }
 
-void Menu_Load(const string& filename, QTreeWidget* tree) {
+void Menu_Load(const string& filename, QTreeWidget* tree, vector<Car>& cars) {
     ifstream file(filename);
     if (!file.is_open()) return;
 
@@ -52,6 +52,16 @@ void Menu_Load(const string& filename, QTreeWidget* tree) {
             parts.push_back(token);
 
         if (parts.size() < 6) continue;
+
+        Car car;
+
+        car.id = stoi(parts[0]);
+        car.brand = parts[1];
+        car.model = parts[2];
+        car.year = stoi(parts[3]);
+        car.price = stod(parts[4]);
+        car.isRented = (parts[5] == "1");
+        cars.push_back(car);
 
         static int rownum = 1;
         QTreeWidgetItem *item = new QTreeWidgetItem(tree);
@@ -171,19 +181,22 @@ void HashTable::add(const Car& car_) {
     sizewdeleted++;
 }
 
-void HashTable::remove(const Car& car_) {
+bool HashTable::remove(const Car& car_) {
     int ind = hash_function(car_, buffer_size);
     Node* current = arr[ind];
 
     while (current) {
-        if (current->car == car_) {
+        if (current->car.id == car_.id && current->state != false) {
             current->state = false;
-            return;
+            break;
         }
         else current = current->next;
     }
+    if (!current) return false;
+
     size--;
     sizewdeleted++;
+    return true;
 }
 
 void HashTable::tableout() {
@@ -226,19 +239,19 @@ void List::push_front(const Car& car) {
     size++;
 }
 
-void List::remove(const Car& car) {
+bool List::remove(const int& id) {
     if (size == 0) {
         cout << "Додайте спочатку хоча-б один елемент, щоб видаляти" << endl;
-        return;
+        return false;
     }
 
     Node* current = head;
 
-    while (current != nullptr && !(current->car == car)) {
+    while (current != nullptr && !(current->car.id == id)) {
         current = current->next;
     }
 
-    if (!current) cout << "Дані за вашим запитом не було знайдено у списку" << endl;
+    if (!current) return false;
 
     if (current == head) head = current->next;
     if (current == tail) tail = current->prev;
@@ -248,6 +261,7 @@ void List::remove(const Car& car) {
 
     delete current;
     size--;
+    return true;
 }
 
 void List::search(const Car& car) {
@@ -259,7 +273,7 @@ void List::search(const Car& car) {
     Node* current = head;
     int i = 0;
 
-    while (current != nullptr && !(current->car == car)) {
+    while (current != nullptr && !(current->car.id == car.id)) {
         i++;
         current = current->next;
     }

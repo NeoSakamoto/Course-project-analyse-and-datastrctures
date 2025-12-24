@@ -44,7 +44,7 @@ public:
 
 void InfofromFile(string& filename, vector<Car>& cars);
 
-void Menu_Load(const string& filename, QTreeWidget* tree);
+void Menu_Load(const string& filename, QTreeWidget* tree, vector<Car>& cars);
 
 // Andriy
 class HashTable {
@@ -72,7 +72,7 @@ public:
 
     void resize();
     void add(const Car& car_);
-    void remove(const Car& car_);
+    bool remove(const Car& car_);
     void tableout();
 
     int hash_function(const Car& car, const int& n);
@@ -97,7 +97,7 @@ public:
     void push_front(const Car& car);
 
     void search(const Car& car);
-    void remove(const Car& car);
+    bool remove(const int& id);
 
     void nodeout();
     void clear();
@@ -116,6 +116,8 @@ private:
     Node* root;
 
     Node* AddNodeRecursive(Node* node, Car c);
+    Node* RemoveRecursive(Node* node, int id);
+    Node* FindMin(Node* node);
     void CollectData(Node* node, vector<Car>& list);
     void ClearMemory(Node* node);
 
@@ -124,6 +126,7 @@ public:
     ~CarSearchTree();
 
     void Insert(Car c);
+    bool Remove(int id);
     vector<Car> GetList();
     Car* Find(int id);
 
@@ -148,6 +151,7 @@ class CarBTree {
 private:
     BTreeNode* root;
 
+    bool RemoveFromNode(BTreeNode* node, int id);
     void ClearMemory(BTreeNode* node);
     void CollectDataRecursive(BTreeNode* node, vector<Car>& list);
     void SplitChild(BTreeNode* x, int i, BTreeNode* y);
@@ -159,6 +163,7 @@ public:
     ~CarBTree();
 
     void Insert(Car k);
+    bool Remove(int id);
     Car* Find(int id, double& timeTakenIds);
     Car* Find(int id);
 
@@ -173,10 +178,6 @@ public:
 
 #endif
 //Egor
-struct Car {
-    int id;
-    double price;
-};
 
 class BinaryHeap {
 private:
@@ -192,11 +193,8 @@ private:
 public:
     void insert(const Car& c);
     Car getMin();
-    void removeMin();
+    bool removeMin();
     bool empty();
 };
 
 void egorTask();
-
-#endif
-

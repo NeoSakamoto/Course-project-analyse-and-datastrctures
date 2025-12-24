@@ -9,6 +9,7 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/q20utility.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/q23type_traits.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/q23utility.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qabstractitemmodel.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qalgorithms.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qalloc.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qanystringview.h
@@ -52,11 +53,13 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qhash.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qhashfunctions.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qiodevicebase.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qitemselectionmodel.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qiterable.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qiterator.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qlatin1stringview.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qline.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qlist.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qlocale.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qlogging.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qmalloc.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qmap.h
@@ -77,6 +80,7 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qprocessordetection.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qrect.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qrefcount.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qregularexpression.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qscopedpointer.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qscopeguard.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qset.h
@@ -152,12 +156,28 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qtguiexports.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qtguiglobal.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qtransform.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qvalidator.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qwindowdefs.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qwindowdefs_win.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QMainWindow
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QTreeWidget
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractitemview.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractscrollarea.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractslider.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractspinbox.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qframe.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qmainwindow.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qrubberband.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qsizepolicy.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qslider.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qstyle.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qstyleoption.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qtabbar.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qtabwidget.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qtreeview.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qtreewidget.h
+ mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qtreewidgetitemiterator.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qtwidgets-config.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qtwidgetsexports.h
  mdp:A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qtwidgetsglobal.h
@@ -175,11 +195,14 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_base.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/concept_check.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h
@@ -196,9 +219,15 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/list.tcc
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.tcc
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_conv.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h
@@ -206,11 +235,13 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/nested_exception.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/node_handle.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h
@@ -218,6 +249,7 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h
@@ -270,6 +302,7 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception
@@ -282,15 +315,21 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iostream
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/locale
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/optional
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
@@ -298,6 +337,7 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf
@@ -330,10 +370,14 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
@@ -375,7 +419,9 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:A:/Programes/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
+ mdp:A:/Programes/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h
  mdp:E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Course-project-analyse-and-datastrctures_autogen/moc_predefs.h
+ mdp:E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/funcs.h
  mdp:E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
 E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/main.cpp
 E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/igor.cpp

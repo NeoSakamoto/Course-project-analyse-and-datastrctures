@@ -28,6 +28,45 @@ Node* CarSearchTree::AddNodeRecursive(Node* node, Car c) {
     return node;
 }
 
+Node* CarSearchTree::FindMin(Node* node) {
+    while (node && node->left)
+        node = node->left;
+    return node;
+}
+
+Node* CarSearchTree::RemoveRecursive(Node* node, int id) {
+    if (!node) return nullptr;
+
+    if (id < node->data.id)
+        node->left = RemoveRecursive(node->left, id);
+    else if (id > node->data.id)
+        node->right = RemoveRecursive(node->right, id);
+    else {
+        if (!node->left) {
+            Node* temp = node->right;
+            delete node;
+            return temp;
+        }
+        else if (!node->right) {
+            Node* temp = node->left;
+            delete node;
+            return temp;
+        }
+
+        Node* temp = FindMin(node->right);
+        node->data = temp->data;
+        node->right = RemoveRecursive(node->right, temp->data.id);
+    }
+    return node;
+}
+
+bool CarSearchTree::Remove(int id) {
+    if (!Find(id)) return false;
+    root = RemoveRecursive(root, id);
+    return true;
+}
+
+
 void CarSearchTree::CollectData(Node* node, vector<Car>& list) {
     if (node != nullptr) {
         CollectData(node->left, list);
@@ -160,6 +199,33 @@ void CarBTree::ClearMemory(BTreeNode* node) {
         }
         delete node;
     }
+}
+
+bool CarBTree::RemoveFromNode(BTreeNode* node, int id) {
+    if (!node) return false;
+
+    for (size_t i = 0; i < node->keys.size(); i++) {
+        if (node->keys[i].id == id) {
+            if (!node->isLeaf)
+                return false;
+
+            node->keys.erase(node->keys.begin() + i);
+            return true;
+        }
+    }
+
+    if (node->isLeaf)
+        return false;
+
+    for (BTreeNode* child : node->children) {
+        if (RemoveFromNode(child, id))
+            return true;
+    }
+    return false;
+}
+
+bool CarBTree::Remove(int id) {
+    return RemoveFromNode(root, id);
 }
 
 void CarBTree::CollectDataRecursive(BTreeNode* node, vector<Car>& list) {

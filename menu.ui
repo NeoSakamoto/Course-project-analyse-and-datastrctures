@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>941</width>
-    <height>573</height>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>20</x>
       <y>10</y>
-      <width>731</width>
-      <height>361</height>
+      <width>721</width>
+      <height>321</height>
      </rect>
     </property>
     <column>
@@ -60,11 +60,14 @@
     </column>
    </widget>
    <widget class="QFrame" name="frame">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
-      <x>770</x>
+      <x>760</x>
       <y>10</y>
-      <width>151</width>
+      <width>161</width>
       <height>321</height>
      </rect>
     </property>
@@ -92,7 +95,7 @@
       <rect>
        <x>10</x>
        <y>30</y>
-       <width>131</width>
+       <width>141</width>
        <height>21</height>
       </rect>
      </property>
@@ -115,7 +118,7 @@
       <rect>
        <x>10</x>
        <y>80</y>
-       <width>131</width>
+       <width>141</width>
        <height>21</height>
       </rect>
      </property>
@@ -125,7 +128,7 @@
       <rect>
        <x>10</x>
        <y>130</y>
-       <width>131</width>
+       <width>141</width>
        <height>21</height>
       </rect>
      </property>
@@ -140,7 +143,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Бренд:</string>
+      <string>Модель:</string>
      </property>
     </widget>
     <widget class="QTextEdit" name="textEdit_4">
@@ -148,7 +151,7 @@
       <rect>
        <x>10</x>
        <y>180</y>
-       <width>131</width>
+       <width>141</width>
        <height>21</height>
       </rect>
      </property>
@@ -184,7 +187,7 @@
       <rect>
        <x>10</x>
        <y>230</y>
-       <width>131</width>
+       <width>141</width>
        <height>21</height>
       </rect>
      </property>
@@ -202,28 +205,236 @@
       <string>Статус:</string>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit_6">
+    <widget class="QCheckBox" name="checkBox">
      <property name="geometry">
       <rect>
        <x>10</x>
        <y>280</y>
-       <width>131</width>
+       <width>141</width>
        <height>21</height>
       </rect>
+     </property>
+     <property name="text">
+      <string>Не орендована</string>
      </property>
     </widget>
    </widget>
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>770</x>
+      <x>20</x>
       <y>340</y>
-      <width>151</width>
-      <height>31</height>
+      <width>161</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
      <string>Додати</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame_2">
+    <property name="geometry">
+     <rect>
+      <x>760</x>
+      <y>340</y>
+      <width>161</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Raised</enum>
+    </property>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Дерево пошуку</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Б-Дерево</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Хеш-таблиця</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Двозв. список</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>90</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Двійкова купа</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>390</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Введений</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>100 елементів</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1000 елементів</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>5000 елементів</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>340</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Видалити</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>340</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Знайти</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_7">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>390</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Введіть ID машини...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_4">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>340</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Редагувати</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>430</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Зберегти</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_6">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>430</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Скасувати</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_8">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>390</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Введіть ID машини...</string>
     </property>
    </widget>
   </widget>
