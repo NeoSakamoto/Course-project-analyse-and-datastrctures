@@ -423,10 +423,10 @@ E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
  mdp:E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Course-project-analyse-and-datastrctures_autogen/moc_predefs.h
  mdp:E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/funcs.h
  mdp:E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h
-E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/main.cpp
 E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/igor.cpp
+E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/main.cpp
+E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/andrii.cpp
 E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.cpp
  uic:./ui_menu.h
-E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/andrii.cpp
 E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/funcs.h
 E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/egor.cpp

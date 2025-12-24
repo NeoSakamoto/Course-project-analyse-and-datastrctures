@@ -181,6 +181,20 @@ void HashTable::add(const Car& car_) {
     sizewdeleted++;
 }
 
+Car* HashTable::findById(int id) {
+    int ind = hash_function(id, buffer_size);
+    Node* current = arr[ind];
+
+    while (current) {
+        if (current->state && current->car.id == id) {
+            return &current->car;
+        }
+        current = current->next;
+    }
+    return nullptr;
+}
+
+
 bool HashTable::remove(const Car& car_) {
     int ind = hash_function(car_, buffer_size);
     Node* current = arr[ind];
@@ -280,6 +294,19 @@ void List::search(const Car& car) {
 
     if (current) cout << "Об'єкт знаходиться у списку під індексом #" << i << "." << endl;
     else cout << "Об'єкт не було знайдено";
+}
+
+Car* List::findById(int id) {
+    if (size == 0)
+        return nullptr;
+
+    Node* current = head;
+    while (current) {
+        if (current->car.id == id)
+            return &current->car;
+        current = current->next;
+    }
+    return nullptr;
 }
 
 void List::clear() {

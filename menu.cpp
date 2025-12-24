@@ -418,13 +418,13 @@ void Menu::on_pushButton_2_clicked()
 }
 
 void Menu::SearchInStruct(int struc) {
-    if (ui->textEdit->toPlainText().isEmpty()) {
+    if (ui->textEdit_7->toPlainText().isEmpty()) {
         QMessageBox::critical(this, "Помилка", "Введіть ID для пошуку");
         return;
     }
 
     bool ok;
-    int id = ui->textEdit->toPlainText().toInt(&ok);
+    int id = ui->textEdit_7->toPlainText().toInt(&ok);
     if (!ok) {
         QMessageBox::critical(this, "Помилка", "Некоректний ID");
         return;
@@ -445,15 +445,15 @@ void Menu::SearchInStruct(int struc) {
         break;
 
     case 3:
-        result = hash.findById(id);   // ❗ должен возвращать Car*
+        result = hash.findById(id);
         break;
 
     case 4:
-        result = list.findById(id);   // ❗ должен возвращать Car*
+        result = list.findById(id);
         break;
 
     case 5:
-        result = heap.findById(id);   // ❗ если реализовано
+        result = /*heap.findById(id);*/ nullptr;
         break;
     }
 
@@ -481,7 +481,7 @@ void Menu::SearchInStruct(int struc) {
                 .arg(duration.count())
             );
     } else {
-        QMessageBox::warning(
+        QMessageBox::critical(
             this,
             "Не знайдено",
             QString(
@@ -493,8 +493,6 @@ void Menu::SearchInStruct(int struc) {
             );
     }
 }
-
-
 
 void Menu::on_pushButton_3_clicked()
 {

@@ -26,7 +26,7 @@ public:
 
     void RemoveFromStruct(int struc);
 
-    void SearchInStruct(int struc)
+    void SearchInStruct(int struc);
 
 private slots:
     void on_pushButton_clicked();

@@ -73,6 +73,7 @@ public:
     void resize();
     void add(const Car& car_);
     bool remove(const Car& car_);
+    Car* findById(int id);
     void tableout();
 
     int hash_function(const Car& car, const int& n);
@@ -97,6 +98,7 @@ public:
     void push_front(const Car& car);
 
     void search(const Car& car);
+    Car* findById(int id);
     bool remove(const int& id);
 
     void nodeout();
