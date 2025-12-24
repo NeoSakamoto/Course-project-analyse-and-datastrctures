@@ -48,21 +48,28 @@ Car BinaryHeap::getMin() {
     return heap[0];
 }
 
-bool BinaryHeap::removeMin() {
+void BinaryHeap::removeMin() {
     if (heap.empty())
-        return false;
+        return;
 
     heap[0] = heap.back();
     heap.pop_back();
 
     if (!heap.empty())
         heapifyDown(0);
-
-    return true;
 }
 
 bool BinaryHeap::empty() {
     return heap.empty();
+}
+
+Car* BinaryHeap::findById(int id) {
+    for (auto& car : heap) {
+        if (car.id == id) {
+            return &car;
+        }
+    }
+    return nullptr;
 }
 
 void egorTask() {
@@ -75,8 +82,8 @@ void egorTask() {
         heap.insert(c);
     }
 
-    if (!heap.empty()) {
-        Car cheapest = heap.getMin();
-        cout << "Cheapest car price: " << cheapest.price << endl;
+    Car* found = heap.findById(5);
+    if (found != nullptr) {
+        cout << "Found car price: " << found->price << endl;
     }
 }
