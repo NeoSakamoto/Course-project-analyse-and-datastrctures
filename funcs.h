@@ -172,3 +172,27 @@ public:
 };
 
 #endif
+struct Car {
+    int id;
+    double price;
+};
+
+class BinaryHeap {
+private:
+    vector<Car> heap;
+
+    int parent(int i);
+    int left(int i);
+    int right(int i);
+
+    void heapifyUp(int i);
+    void heapifyDown(int i);
+
+public:
+    void insert(const Car& c);
+    Car getMin();
+    void removeMin();
+    bool empty();
+};
+
+void egorTask();
