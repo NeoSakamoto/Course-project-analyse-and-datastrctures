@@ -453,7 +453,7 @@ void Menu::SearchInStruct(int struc) {
         break;
 
     case 5:
-        result = /*heap.findById(id);*/ nullptr;
+        result = heap.findById(id);
         break;
     }
 

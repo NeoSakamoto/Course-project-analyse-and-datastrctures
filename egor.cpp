@@ -48,15 +48,17 @@ Car BinaryHeap::getMin() {
     return heap[0];
 }
 
-void BinaryHeap::removeMin() {
+bool BinaryHeap::removeMin() {
     if (heap.empty())
-        return;
+        return false;
 
     heap[0] = heap.back();
     heap.pop_back();
 
     if (!heap.empty())
         heapifyDown(0);
+
+    return true;
 }
 
 bool BinaryHeap::empty() {

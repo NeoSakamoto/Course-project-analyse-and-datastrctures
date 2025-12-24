@@ -180,11 +180,6 @@ public:
 
 #endif
 //Egor
-struct Car {
-    int id;
-    double price;
-};
-
 class BinaryHeap {
 private:
     vector<Car> heap;
@@ -199,12 +194,10 @@ private:
 public:
     void insert(const Car& c);
     Car getMin();
-    void removeMin();
+    bool removeMin();
     bool empty();
 
     Car* findById(int id);
 };
 
 void egorTask();
-
-#endif
