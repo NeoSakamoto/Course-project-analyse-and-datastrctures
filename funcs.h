@@ -196,4 +196,4 @@ public:
     bool empty();
 };
 
-void egorTask();
+#endif
