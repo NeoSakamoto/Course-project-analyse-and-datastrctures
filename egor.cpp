@@ -3,9 +3,17 @@
 
 using namespace std;
 
-int BinaryHeap::parent(int i) { return (i - 1) / 2; }
-int BinaryHeap::left(int i) { return 2 * i + 1; }
-int BinaryHeap::right(int i) { return 2 * i + 2; }
+int BinaryHeap::parent(int i) {
+    return (i - 1) / 2;
+}
+
+int BinaryHeap::left(int i) {
+    return 2 * i + 1;
+}
+
+int BinaryHeap::right(int i) {
+    return 2 * i + 2;
+}
 
 void BinaryHeap::heapifyUp(int i) {
     while (i > 0 && heap[parent(i)].price > heap[i].price) {
@@ -41,9 +49,14 @@ Car BinaryHeap::getMin() {
 }
 
 void BinaryHeap::removeMin() {
+    if (heap.empty())
+        return;
+
     heap[0] = heap.back();
     heap.pop_back();
-    heapifyDown(0);
+
+    if (!heap.empty())
+        heapifyDown(0);
 }
 
 bool BinaryHeap::empty() {
