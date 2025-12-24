@@ -172,6 +172,7 @@ public:
 };
 
 #endif
+//Egor
 struct Car {
     int id;
     double price;
