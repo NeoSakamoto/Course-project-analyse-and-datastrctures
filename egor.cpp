@@ -1,61 +1,54 @@
 #include "funcs.h"
-#include <vector>
 #include <iostream>
 
 using namespace std;
 
-class BinaryHeap {
-private:
-    vector<Car> heap;
+int BinaryHeap::parent(int i) { return (i - 1) / 2; }
+int BinaryHeap::left(int i) { return 2 * i + 1; }
+int BinaryHeap::right(int i) { return 2 * i + 2; }
 
-    int parent(int i) { return (i - 1) / 2; }
-    int left(int i) { return 2 * i + 1; }
-    int right(int i) { return 2 * i + 2; }
-
-    void heapifyUp(int i) {
-        while (i > 0 && heap[parent(i)].price > heap[i].price) {
-            swap(heap[i], heap[parent(i)]);
-            i = parent(i);
-        }
+void BinaryHeap::heapifyUp(int i) {
+    while (i > 0 && heap[parent(i)].price > heap[i].price) {
+        swap(heap[i], heap[parent(i)]);
+        i = parent(i);
     }
+}
 
-    void heapifyDown(int i) {
-        int smallest = i;
-        int l = left(i);
-        int r = right(i);
+void BinaryHeap::heapifyDown(int i) {
+    int smallest = i;
+    int l = left(i);
+    int r = right(i);
 
-        if (l < heap.size() && heap[l].price < heap[smallest].price)
-            smallest = l;
+    if (l < heap.size() && heap[l].price < heap[smallest].price)
+        smallest = l;
 
-        if (r < heap.size() && heap[r].price < heap[smallest].price)
-            smallest = r;
+    if (r < heap.size() && heap[r].price < heap[smallest].price)
+        smallest = r;
 
-        if (smallest != i) {
-            swap(heap[i], heap[smallest]);
-            heapifyDown(smallest);
-        }
+    if (smallest != i) {
+        swap(heap[i], heap[smallest]);
+        heapifyDown(smallest);
     }
+}
 
-public:
-    void insert(const Car& c) {
-        heap.push_back(c);
-        heapifyUp(heap.size() - 1);
-    }
+void BinaryHeap::insert(const Car& c) {
+    heap.push_back(c);
+    heapifyUp(heap.size() - 1);
+}
 
-    Car getMin() {
-        return heap[0];
-    }
+Car BinaryHeap::getMin() {
+    return heap[0];
+}
 
-    void removeMin() {
-        heap[0] = heap.back();
-        heap.pop_back();
-        heapifyDown(0);
-    }
+void BinaryHeap::removeMin() {
+    heap[0] = heap.back();
+    heap.pop_back();
+    heapifyDown(0);
+}
 
-    bool empty() {
-        return heap.empty();
-    }
-};
+bool BinaryHeap::empty() {
+    return heap.empty();
+}
 
 void egorTask() {
     BinaryHeap heap;
