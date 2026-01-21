@@ -18,14 +18,45 @@ public:
     int year;
     double price;
     bool isRented;
+    string rentedUntil;
+    string owner;
+
+    struct User {
+        string login;
+        string password;
+        string role;
+    };
+
+    bool CheckUser(const string& login, const string& pass, string& outRole); //наприклад: admin;admin;admin. логін;пароль;роль
 
     bool operator==(const Car& other) const {
-        return id == other.id && brand == other.brand && model == other.model &&
-            year == other.year && price == other.price && isRented == other.isRented;
+        return id == other.id &&
+            brand == other.brand &&
+            model == other.model &&
+            year == other.year &&
+            price == other.price &&
+            isRented == other.isRented &&
+            rentedUntil == other.rentedUntil &&
+            owner == other.owner;
     }
 
-    Car(int _id = 0, string _b = "", string _m = "", int _y = 0, double _p = 0.0) {
-        id = _id; brand = _b; model = _m; year = _y; price = _p; isRented = false;
+    Car(int _id = 0, string _b = "", string _m = "", int _y = 0, double _p = 0.0, string _owner = "Admin", string _date = "-") {
+        id = _id;
+        brand = _b;
+        model = _m;
+        year = _y;
+        price = _p;
+
+        if (_date != "-") {
+            isRented = true;
+            rentedUntil = _date;
+        }
+        else {
+            isRented = false;
+            rentedUntil = "-";
+        }
+
+        owner = _owner;
     }
 
     string GetInfo() const {
@@ -69,7 +100,7 @@ private:
 public:
     HashTable();
     ~HashTable();
-
+    bool Edit(int id, string newBrand, string newModel, int newYear, double newPrice);
     void resize();
     void add(const Car& car_);
     bool remove(const Car& car_);
@@ -103,6 +134,7 @@ public:
 
     void nodeout();
     void clear();
+    bool Edit(int id, string newBrand, string newModel, int newYear, double newPrice);
 };
 
 // Ihor
@@ -134,6 +166,7 @@ public:
 
     void SaveToFile(string filename);
     void LoadFromFile(string filename);
+    bool Edit(int id, string newBrand, string newModel, int newYear, double newPrice);
 
     bool RentCar(int id);
     bool ReturnCar(int id);
@@ -176,6 +209,7 @@ public:
 
     void SaveToFile(string filename);
     void LoadFromFile(string filename);
+    bool Edit(int id, string newBrand, string newModel, int newYear, double newPrice);
 };
 
 #endif
@@ -198,6 +232,7 @@ public:
     bool empty();
 
     Car* findById(int id);
+    bool Edit(int id, string newBrand, string newModel, int newYear, double newPrice);
 };
 
 void egorTask();

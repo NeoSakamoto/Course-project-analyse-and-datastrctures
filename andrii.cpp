@@ -14,27 +14,32 @@ void InfofromFile(string& filename, vector<Car>& cars) {
     while (getline(file, line)) {
         stringstream ss(line);
         string token;
-        Car car;
+        vector<string> parts;
 
-        getline(ss, token, ';');
-        car.id = stoi(token);
+        while (getline(ss, token, ';')) {
+            parts.push_back(token);
+        }
 
-        getline(ss, token, ';');
-        car.brand = token;
+        if (parts.size() >= 6) {
+            Car car;
+            car.id = stoi(parts[0]);
+            car.brand = parts[1];
+            car.model = parts[2];
+            car.year = stoi(parts[3]);
+            car.price = stod(parts[4]);
+            car.isRented = (parts[5] == "1");
 
-        getline(ss, token, ';');
-        car.model = token;
+            if (parts.size() >= 8) {
+                car.rentedUntil = parts[6];
+                car.owner = parts[7];
+            }
+            else {
+                car.rentedUntil = "-";
+                car.owner = "Admin";
+            }
 
-        getline(ss, token, ';');
-        car.year = stoi(token);
-
-        getline(ss, token, ';');
-        car.price = stod(token);
-
-        getline(ss, token, ';');
-        car.isRented = (token == "1");
-
-        cars.push_back(car);
+            cars.push_back(car);
+        }
     }
 }
 
@@ -54,26 +59,21 @@ void Menu_Load(const string& filename, QTreeWidget* tree, vector<Car>& cars) {
         if (parts.size() < 6) continue;
 
         Car car;
-
         car.id = stoi(parts[0]);
         car.brand = parts[1];
         car.model = parts[2];
         car.year = stoi(parts[3]);
         car.price = stod(parts[4]);
         car.isRented = (parts[5] == "1");
-        cars.push_back(car);
 
-        static int rownum = 1;
-        QTreeWidgetItem *item = new QTreeWidgetItem(tree);
-        item->setText(0, QString::number(rownum++));
-        item->setText(1, QString::fromStdString(parts[0]));
-        item->setText(2, QString::fromStdString(parts[1]));
-        item->setText(3, QString::fromStdString(parts[2]));
-        item->setText(4, QString::fromStdString(parts[3]));
-        item->setText(5, QString::fromStdString(parts[4]));
-        item->setText(6, parts[5] == "1" ? "RENT" : "NOT RENT");
-    }
-}
+        if (parts.size() >= 8) {
+            car.rentedUntil = parts[6];
+            car.owner = parts[7];
+        }
+        else {
+            car.rentedUntil = "-";
+            car.owner = "Admin";
+        }
 
 HashTable::HashTable() {
     buffer_size = default_size;
@@ -95,6 +95,20 @@ HashTable::~HashTable() {
         }
     }
     delete[] arr;
+}
+
+bool HashTable::Edit(int id, string newBrand, string newModel, int newYear, double newPrice) {
+    Car* car = findById(id);
+    if (car == nullptr) {
+        return false;
+    }
+
+    car->brand = newBrand;
+    car->model = newModel;
+    car->year = newYear;
+    car->price = newPrice;
+
+    return true;
 }
 
 void HashTable::resize() {
@@ -232,6 +246,20 @@ int HashTable::hash_function(const Car& car_, const int& n) {
 
 List::List() : head(nullptr), tail(nullptr), size(0) {};
 List::~List() { clear(); };
+
+bool List::Edit(int id, string newBrand, string newModel, int newYear, double newPrice) {
+    Car* car = findById(id);
+    if (car == nullptr) {
+        return false;
+    }
+
+    car->brand = newBrand;
+    car->model = newModel;
+    car->year = newYear;
+    car->price = newPrice;
+
+    return true;
+}
 
 void List::push_back(const Car& car) {
     if (size == 0) {

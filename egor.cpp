@@ -15,6 +15,20 @@ int BinaryHeap::right(int i) {
     return 2 * i + 2;
 }
 
+bool BinaryHeap::Edit(int id, string newBrand, string newModel, int newYear, double newPrice) {
+    Car* car = findById(id);
+    if (car == nullptr) {
+        return false;
+    }
+
+    car->brand = newBrand;
+    car->model = newModel;
+    car->year = newYear;
+    car->price = newPrice;
+
+    return true;
+}
+
 void BinaryHeap::heapifyUp(int i) {
     while (i > 0 && heap[parent(i)].price > heap[i].price) {
         swap(heap[i], heap[parent(i)]);

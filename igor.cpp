@@ -60,6 +60,20 @@ Node* CarSearchTree::RemoveRecursive(Node* node, int id) {
     return node;
 }
 
+bool CarSearchTree::Edit(int id, string newBrand, string newModel, int newYear, double newPrice) {
+    Car* car = Find(id);
+    if (car == nullptr) {
+        return false;
+    }
+
+    car->brand = newBrand;
+    car->model = newModel;
+    car->year = newYear;
+    car->price = newPrice;
+
+    return true;
+}
+
 bool CarSearchTree::Remove(int id) {
     if (!Find(id)) return false;
     root = RemoveRecursive(root, id);
@@ -190,6 +204,20 @@ CarBTree::CarBTree() : root(nullptr) {}
 
 CarBTree::~CarBTree() {
     ClearMemory(root);
+}
+
+bool CarBTree::Edit(int id, string newBrand, string newModel, int newYear, double newPrice) {
+    Car* car = Find(id);
+    if (car == nullptr) {
+        return false;
+    }
+
+    car->brand = newBrand;
+    car->model = newModel;
+    car->year = newYear;
+    car->price = newPrice;
+
+    return true;
 }
 
 void CarBTree::ClearMemory(BTreeNode* node) {
@@ -401,4 +429,44 @@ void CarBTree::LoadFromFile(string filename) {
         }
     }
     file.close();
+}
+
+vector<User> LoadUsersFromFile(const string& filename) { //завантаження списку юзерів з файлу
+    vector<User> users;
+    ifstream file(filename);
+    if (!file.is_open()) return users;
+
+    string line;
+    while (getline(file, line)) {
+        stringstream ss(line);
+        string segment;
+        vector<string> data;
+
+        while (getline(ss, segment, ';')) {
+            data.push_back(segment);
+        }
+
+        if (data.size() >= 3) {
+            users.push_back({ data[0], data[1], data[2] });
+        }
+    }
+    return users;
+}
+
+bool CheckUser(const string& login, const string& pass, string& outRole) { //перевіряє чи є такий юзер у файлі
+    vector<User> users = LoadUsersFromFile("users.txt");
+    if (users.empty()) {
+        if (login == "admin" && pass == "admin") {
+            outRole = "admin";
+            return true;
+        }
+    }
+
+    for (const auto& u : users) {
+        if (u.login == login && u.password == pass) {
+            outRole = u.role;
+            return true;
+        }
+    }
+    return false;
 }
