@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTreeWidget>
 #include "funcs.h"
+#include <fstream>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -19,20 +20,21 @@ public:
     Menu(QWidget *parent = nullptr);
     ~Menu();
     void AddToWidget(Car car);
+    void Structures_Load(vector<Car>& cars);
+
+    void UpdateCarInFile(const Car& car);
+    void AppendCarToFile(const Car& car);
 
     void InsertEl(int structure, int count);
-    void StructureAddEl(int structureind, int addcount);
+    void StructureAddEl(int structureind);
     bool CheckFields(Car& car);
 
     void RemoveFromStruct(int struc);
 
     void SearchInStruct(int struc);
+    void RentInStruct(int struc);
 
 private slots:
-    void on_pushButton_clicked();
-
-    void on_comboBox_activated(int index);
-
     void on_comboBox_2_activated(int index);
 
     void on_pushButton_4_clicked();
@@ -46,6 +48,10 @@ private slots:
     void on_pushButton_2_clicked();
 
     void on_pushButton_3_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_9_clicked();
 
 private:
     Ui::Menu *ui;

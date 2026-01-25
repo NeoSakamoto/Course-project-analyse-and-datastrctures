@@ -1,5 +1,4 @@
 #include "funcs.h"
-#include <iostream>
 #include <sstream>
 #include <vector>
 #include <fstream>
@@ -74,6 +73,21 @@ void Menu_Load(const string& filename, QTreeWidget* tree, vector<Car>& cars) {
             car.rentedUntil = "-";
             car.owner = "Admin";
         }
+        cars.push_back(car);
+
+        int rownum = tree->topLevelItemCount();
+        QTreeWidgetItem *item = new QTreeWidgetItem(tree);
+        item->setText(0, QString::number(rownum));
+        item->setText(1, QString::number(car.id));
+        item->setText(2, QString::fromStdString(car.brand));
+        item->setText(3, QString::fromStdString(car.model));
+        item->setText(4, QString::number(car.year));
+        item->setText(5, QString::number(car.price, 'f', 1));
+        item->setText(6, car.isRented == true ? "RENT" : "NOT RENT");
+        item->setText(7, QString::fromStdString(car.rentedUntil));
+        item->setText(8, QString::fromStdString(car.owner));
+    }
+}
 
 HashTable::HashTable() {
     buffer_size = default_size;

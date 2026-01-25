@@ -27,6 +27,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         andrii.cpp
         egor.cpp
         igor.cpp
+        rentdialog.h
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Course-project-analyse-and-datastrctures APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

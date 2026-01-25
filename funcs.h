@@ -10,6 +10,12 @@
 #include <QTreeWidget>
 using namespace std;
 
+struct User {
+    string login;
+    string password;
+    string role;
+};
+
 class Car {
 public:
     int id;
@@ -20,12 +26,7 @@ public:
     bool isRented;
     string rentedUntil;
     string owner;
-
-    struct User {
-        string login;
-        string password;
-        string role;
-    };
+    User user;
 
     bool CheckUser(const string& login, const string& pass, string& outRole); //наприклад: admin;admin;admin. логін;пароль;роль
 
