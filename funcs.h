@@ -70,7 +70,8 @@ public:
 
     string ToString() const {
         return to_string(id) + ";" + brand + ";" + model + ";" +
-            to_string(year) + ";" + to_string(price) + ";" + (isRented ? "1" : "0");
+            to_string(year) + ";" + to_string(price) + ";" + (isRented ? "1" : "0") +
+            ";" + rentedUntil + ";" + owner;
     }
 };
 
