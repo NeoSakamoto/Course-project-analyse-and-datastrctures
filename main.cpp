@@ -1,10 +1,10 @@
 ﻿#include <QApplication>
-#include "menu.h"
+#include "loginwindow.h"
 
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    Menu w;
-    w.show();
+    LoginWindow lw;
+    lw.show();
     return app.exec();
 }

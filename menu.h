@@ -17,7 +17,7 @@ class Menu : public QMainWindow
     Q_OBJECT
 
 public:
-    Menu(QWidget *parent = nullptr);
+    Menu(const QString &role, const QString& login, QWidget *parent = nullptr);
     ~Menu();
     void AddToWidget(Car car);
     void Structures_Load(vector<Car>& cars);
@@ -53,10 +53,14 @@ private slots:
 
     void on_pushButton_9_clicked();
 
+    void on_pushButton_8_clicked();
+
 private:
     Ui::Menu *ui;
     QTreeWidgetItem *editeditem = nullptr;
     vector <Car> cars;
+    QString userRole;
+    QString userLogin;
 
     HashTable hash;
     CarSearchTree searchtree;
