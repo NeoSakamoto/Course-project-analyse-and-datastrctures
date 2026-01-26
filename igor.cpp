@@ -14,7 +14,6 @@ using namespace std;
 Node::Node(Car c) : data(c), left(nullptr), right(nullptr) {}
 
 CarSearchTree::CarSearchTree() : root(nullptr) {
-LoadFromFile("cars.txt");  
 }
 
 CarSearchTree::~CarSearchTree() {
@@ -212,7 +211,6 @@ bool CarSearchTree::ReturnCar(int id) {
 BTreeNode::BTreeNode(bool _leaf) : isLeaf(_leaf) {}
 
 CarBTree::CarBTree() : root(nullptr) { 
-    LoadFromFile("cars.txt");
 }
 
 CarBTree::~CarBTree() {
