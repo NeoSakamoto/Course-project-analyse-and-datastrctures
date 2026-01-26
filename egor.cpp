@@ -107,3 +107,37 @@ void egorTask() {
         cout << "Found car price: " << found->price << endl;
     }
 }
+
+void BinaryHeap::LoadFromFile(string filename) {
+    ifstream file(filename);
+    if (!file.is_open()) return;
+
+    string line;
+    while (getline(file, line)) {
+        if (line.empty()) continue;
+        stringstream ss(line);
+        string token;
+        vector<string> parts;
+        while (getline(ss, token, ';')) parts.push_back(token);
+
+        if (parts.size() >= 6) {
+            Car c;
+            c.id = stoi(parts[0]);
+            c.brand = parts[1];
+            c.model = parts[2];
+            c.year = stoi(parts[3]);
+            c.price = stod(parts[4]);
+            c.isRented = (parts[5] == "1");
+
+            if (parts.size() >= 8) {
+                c.rentedUntil = parts[6];
+                c.owner = parts[7];
+            } else {
+                c.rentedUntil = "-";
+                c.owner = "Admin";
+            }
+            insert(c);
+        }
+    }
+    file.close();
+}
