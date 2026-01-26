@@ -433,6 +433,14 @@ void CarBTree::LoadFromFile(string filename) {
                 c.year = stoi(data[3]);
                 c.price = stod(data[4]);
                 c.isRented = (data[5] == "1");
+                
+                if (data.size() >= 8) {
+                    c.rentedUntil = data[6];
+                    c.owner = data[7];
+                } else {
+                    c.rentedUntil = "-";
+                    c.owner = "Admin";
+                }
 
                 Insert(c);
             }
