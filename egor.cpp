@@ -6,7 +6,6 @@
 using namespace std;
 
 BinaryHeap::BinaryHeap() {
-    LoadFromFile("cars.txt");
 }
 
 int BinaryHeap::parent(int i) {
