@@ -98,8 +98,6 @@ HashTable::HashTable() {
     for (int i = 0; i < buffer_size; i++) {
         arr[i] = nullptr;
     }
-    
-    LoadFromFile("cars.txt");
 }
 HashTable::~HashTable() {
     for (int i = 0; i < buffer_size; i++) {
@@ -261,8 +259,6 @@ int HashTable::hash_function(const Car& car_, const int& n) {
 }
 
 List::List() : head(nullptr), tail(nullptr), size(0) {
-
-    LoadFromFile("cars.txt");
 };
 List::~List() { clear(); };
 
