@@ -98,6 +98,8 @@ HashTable::HashTable() {
     for (int i = 0; i < buffer_size; i++) {
         arr[i] = nullptr;
     }
+    
+    LoadFromFile("cars.txt");
 }
 HashTable::~HashTable() {
     for (int i = 0; i < buffer_size; i++) {
@@ -258,7 +260,10 @@ int HashTable::hash_function(const Car& car_, const int& n) {
     return car_.id % n;
 }
 
-List::List() : head(nullptr), tail(nullptr), size(0) {};
+List::List() : head(nullptr), tail(nullptr), size(0) {
+
+    LoadFromFile("cars.txt");
+};
 List::~List() { clear(); };
 
 bool List::Edit(int id, string newBrand, string newModel, int newYear, double newPrice) {
@@ -297,7 +302,7 @@ void List::push_front(const Car& car) {
 
 bool List::remove(const int& id) {
     if (size == 0) {
-        cout << "Äîäàéòå ñïî÷àòêó õî÷à-á îäèí åëåìåíò, ùîá âèäàëÿòè" << endl;
+        cout << "Ã„Ã®Ã¤Ã Ã©Ã²Ã¥ Ã±Ã¯Ã®Ã·Ã Ã²ÃªÃ³ ÃµÃ®Ã·Ã -Ã¡ Ã®Ã¤Ã¨Ã­ Ã¥Ã«Ã¥Ã¬Ã¥Ã­Ã², Ã¹Ã®Ã¡ Ã¢Ã¨Ã¤Ã Ã«Ã¿Ã²Ã¨" << endl;
         return false;
     }
 
@@ -322,7 +327,7 @@ bool List::remove(const int& id) {
 
 void List::search(const Car& car) {
     if (size == 0) {
-        cout << "Íåìà ñåðåä ÷îãî øóêàòè" << endl;
+        cout << "ÃÃ¥Ã¬Ã  Ã±Ã¥Ã°Ã¥Ã¤ Ã·Ã®Ã£Ã® Ã¸Ã³ÃªÃ Ã²Ã¨" << endl;
         return;
     }
 
@@ -334,8 +339,8 @@ void List::search(const Car& car) {
         current = current->next;
     }
 
-    if (current) cout << "Îá'ºêò çíàõîäèòüñÿ ó ñïèñêó ï³ä ³íäåêñîì #" << i << "." << endl;
-    else cout << "Îá'ºêò íå áóëî çíàéäåíî";
+    if (current) cout << "ÃŽÃ¡'ÂºÃªÃ² Ã§Ã­Ã ÃµÃ®Ã¤Ã¨Ã²Ã¼Ã±Ã¿ Ã³ Ã±Ã¯Ã¨Ã±ÃªÃ³ Ã¯Â³Ã¤ Â³Ã­Ã¤Ã¥ÃªÃ±Ã®Ã¬ #" << i << "." << endl;
+    else cout << "ÃŽÃ¡'ÂºÃªÃ² Ã­Ã¥ Ã¡Ã³Ã«Ã® Ã§Ã­Ã Ã©Ã¤Ã¥Ã­Ã®";
 }
 
 Car* List::findById(int id) {
@@ -363,7 +368,7 @@ void List::clear() {
 
 void List::nodeout() {
     if (size == 0) {
-        cout << "Ñïèñîê ïóñòèé, âèâîäèòè í³÷îãî" << endl;
+        cout << "Ã‘Ã¯Ã¨Ã±Ã®Ãª Ã¯Ã³Ã±Ã²Ã¨Ã©, Ã¢Ã¨Ã¢Ã®Ã¤Ã¨Ã²Ã¨ Ã­Â³Ã·Ã®Ã£Ã®" << endl;
         return;
     }
 
