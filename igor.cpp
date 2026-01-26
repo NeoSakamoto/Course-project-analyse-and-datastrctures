@@ -14,7 +14,6 @@ using namespace std;
 Node::Node(Car c) : data(c), left(nullptr), right(nullptr) {}
 
 CarSearchTree::CarSearchTree() : root(nullptr) {
-LoadFromFile("cars.txt");  
 }
 
 CarSearchTree::~CarSearchTree() {
@@ -169,6 +168,15 @@ void CarSearchTree::LoadFromFile(string filename) {
                 c.year = stoi(data[3]);
                 c.price = stod(data[4]);
                 c.isRented = (data[5] == "1");
+
+                if (data.size() >= 8) {
+                    c.rentedUntil = data[6];
+                    c.owner = data[7];
+                } else {
+                    c.rentedUntil = "-";
+                    c.owner = "Admin";
+                }
+                
                 Insert(c);
             }
             catch (...) {
@@ -203,7 +211,6 @@ bool CarSearchTree::ReturnCar(int id) {
 BTreeNode::BTreeNode(bool _leaf) : isLeaf(_leaf) {}
 
 CarBTree::CarBTree() : root(nullptr) { 
-    LoadFromFile("cars.txt");
 }
 
 CarBTree::~CarBTree() {
@@ -424,6 +431,14 @@ void CarBTree::LoadFromFile(string filename) {
                 c.year = stoi(data[3]);
                 c.price = stod(data[4]);
                 c.isRented = (data[5] == "1");
+                
+                if (data.size() >= 8) {
+                    c.rentedUntil = data[6];
+                    c.owner = data[7];
+                } else {
+                    c.rentedUntil = "-";
+                    c.owner = "Admin";
+                }
 
                 Insert(c);
             }

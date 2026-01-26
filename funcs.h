@@ -110,6 +110,7 @@ public:
     void tableout();
 
     int hash_function(const Car& car, const int& n);
+        void LoadFromFile(string filename);
 };
 
 class List {
@@ -137,6 +138,8 @@ public:
     void nodeout();
     void clear();
     bool Edit(int id, string newBrand, string newModel, int newYear, double newPrice);
+
+    void LoadFromFile(string filename);
 };
 
 // Ihor
@@ -228,6 +231,7 @@ private:
     void heapifyDown(int i);
 
 public:
+    BinaryHeap();
     void insert(const Car& c);
     Car getMin();
     bool removeMin();
@@ -235,6 +239,7 @@ public:
 
     Car* findById(int id);
     bool Edit(int id, string newBrand, string newModel, int newYear, double newPrice);
+    void LoadFromFile(string filename);
 };
 
 void egorTask();
