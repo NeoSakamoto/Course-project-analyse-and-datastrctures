@@ -575,30 +575,61 @@ void Menu::SearchInStruct(int struc) {
     }
 }
 
-void Menu::RentInStruct(int struc) {
+void Menu::RentInStruct(int struc)
+{
     QTreeWidgetItem *item = ui->treeWidget->currentItem();
     if (!item) {
         QMessageBox::critical(this, "Помилка", "Виберіть спочатку елемент для оренди");
         return;
     }
+
+    int carId = item->text(1).toInt();
+
     if (item->text(6) == "RENT") {
-        QMessageBox::critical(this, "Помилка", "Не можна взяти в оренду вже орендовану машину. Оберіть іншу");
-        return;
+        QString period = item->text(7);
+        QStringList parts = period.split("-");
+
+        if (parts.size() == 2) {
+            QDate rentedTo = QDate::fromString(parts[1], "dd.MM.yyyy");
+            QDate today = QDate::currentDate();
+
+            if (rentedTo.isValid() && today <= rentedTo) {
+                QMessageBox::critical(this, "Помилка", "Ця машина вже орендована до " + rentedTo.toString("dd.MM.yyyy"));
+                return;
+            }
+
+            item->setText(6, "NOT RENT");
+            item->setText(7, "");
+        }
     }
 
     RentDialog dialog(this);
-    if (dialog.exec() != QDialog::Accepted) return;
+    if (dialog.exec() != QDialog::Accepted)
+        return;
 
     QDate from = dialog.getFromDate();
-    QDate to = dialog.getToDate();
-    string FromToString = from.toString("dd.MM.yyyy").toStdString() + "-" + to.toString("dd.MM.yyyy").toStdString();
+    QDate to   = dialog.getToDate();
+
+    if (from > to) {
+        QMessageBox::critical(this, "Помилка", "Дата початку не може бути пізніше дати завершення");
+        return;
+    }
+
+    QDate today = QDate::currentDate();
+    if (from < today) {
+        QMessageBox::critical(this, "Помилка", "Не можна починати оренду в минулому");
+        return;
+    }
+
+    string FromToString =
+        from.toString("dd.MM.yyyy").toStdString() + "-" +
+        to.toString("dd.MM.yyyy").toStdString();
 
     item->setText(7, QString::fromStdString(FromToString));
     item->setText(6, "RENT");
 
-    int carId = item->text(1).toInt();
-
     auto start = chrono::high_resolution_clock::now();
+
     auto findCar = [&](int structure) -> Car* {
         switch (structure) {
         case 1: return searchtree.Find(carId);
@@ -611,7 +642,6 @@ void Menu::RentInStruct(int struc) {
     };
 
     Car* mainCar = findCar(struc);
-
     if (!mainCar) {
         QMessageBox::critical(this, "Помилка", "Машина з таким ID не знайдена в цій структурі!");
         return;
@@ -619,9 +649,16 @@ void Menu::RentInStruct(int struc) {
 
     mainCar->isRented = true;
     mainCar->rentedUntil = FromToString;
+
     auto end = chrono::high_resolution_clock::now();
     auto duration = chrono::duration_cast<chrono::microseconds>(end - start);
-    QMessageBox::information(this, "Успіх", "Елемент було взято в оренду за " + QString::number(duration.count()) + " мікросекунд");
+
+    QMessageBox::information(
+        this,
+        "Успіх",
+        "Елемент було взято в оренду за " +
+            QString::number(duration.count()) + " мікросекунд"
+        );
 
     for (int i = 1; i <= 5; ++i) {
         if (i == struc) continue;
