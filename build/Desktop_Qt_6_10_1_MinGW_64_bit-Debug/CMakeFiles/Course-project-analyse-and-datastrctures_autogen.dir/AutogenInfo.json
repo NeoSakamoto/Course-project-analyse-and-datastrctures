@@ -316,15 +316,33 @@
 	"HEADERS" : 
 	[
 		[
+			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/RentDialog.h",
+			"MU",
+			"EWIEGA46WW/moc_RentDialog.cpp",
+			null
+		],
+		[
 			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/funcs.h",
 			"MU",
 			"EWIEGA46WW/moc_funcs.cpp",
 			null
 		],
 		[
+			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/loginwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_loginwindow.cpp",
+			null
+		],
+		[
 			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h",
 			"MU",
 			"EWIEGA46WW/moc_menu.cpp",
+			null
+		],
+		[
+			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/registerwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_registerwindow.cpp",
 			null
 		]
 	],
@@ -415,12 +433,22 @@
 			null
 		],
 		[
+			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/loginwindow.cpp",
+			"MU",
+			null
+		],
+		[
 			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/main.cpp",
 			"MU",
 			null
 		],
 		[
 			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.cpp",
+			"MU",
+			null
+		],
+		[
+			"E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/registerwindow.cpp",
 			"MU",
 			null
 		]

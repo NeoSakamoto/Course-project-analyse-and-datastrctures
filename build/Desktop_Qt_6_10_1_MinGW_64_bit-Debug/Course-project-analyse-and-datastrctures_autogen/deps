@@ -23,6 +23,7 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qbytearrayalgorithms.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qbytearraylist.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qbytearrayview.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qcalendar.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qchar.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qcheckedint_impl.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qcompare.h \
@@ -37,6 +38,7 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qcontiguouscache.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qdarwinhelpers.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qdatastream.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qdatetime.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qdebug.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qendian.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qexceptionhandling.h \
@@ -50,6 +52,7 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qglobalstatic.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qhash.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qhashfunctions.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qiodevice.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qiodevicebase.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qitemselectionmodel.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qiterable.h \
@@ -114,6 +117,7 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtenvironmentvariables.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtextstream.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtformat_impl.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtimezone.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtmetamacros.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtnoop.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -124,6 +128,7 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtversionchecks.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtypeinfo.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qtypes.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qurl.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qutf8stringview.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qvariant.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -144,12 +149,14 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qkeysequence.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qpaintdevice.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qpalette.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qpicture.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qpixelformat.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qpixmap.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qpolygon.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qregion.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qrgb.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qrgba64.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qtextdocument.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qtgui-config.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qtguiexports.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qtguiglobal.h \
@@ -157,15 +164,33 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qvalidator.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qwindowdefs.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtGui/qwindowdefs_win.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QDateEdit \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QDialog \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QHBoxLayout \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QLabel \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QMainWindow \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QMessageBox \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QPushButton \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QTreeWidget \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/QVBoxLayout \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractbutton.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractitemview.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractslider.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qboxlayout.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qdatetimeedit.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qdialog.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qframe.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qgridlayout.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qlabel.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qlayout.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qlayoutitem.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qmainwindow.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qmessagebox.h \
+	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qpushbutton.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qrubberband.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qsizepolicy.h \
 	A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets/qslider.h \
@@ -388,6 +413,7 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h \
+	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fstream.tcc \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h \
@@ -489,6 +515,7 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h \
+	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
@@ -542,8 +569,10 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/vector \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/version \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/atomic_word.h \
+	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/basic_file.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++allocator.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
+	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++io.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h \
 	A:/Programes/QT/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h \
@@ -597,6 +626,7 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	A:/Programes/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
 	A:/Programes/QT/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/CMakeLists.txt \
+	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/RentDialog.h \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/andrii.cpp \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/.qtc/package-manager/maintenance_tool_provider.cmake \
@@ -607,8 +637,14 @@ Course-project-analyse-and-datastrctures_autogen/timestamp: \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/egor.cpp \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/funcs.h \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/igor.cpp \
+	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/loginwindow.cpp \
+	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/loginwindow.h \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/main.cpp \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.cpp \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.h \
+	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/registerwindow.cpp \
+	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/registerwindow.h \
+	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/loginwindow.ui \
 	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/menu.ui \
+	E:/VisualStudioRepos/Course-project-analyse-and-datastrctures/registerwindow.ui \
 	A:/Programes/QT/Tools/CMake_64/bin/cmake.exe

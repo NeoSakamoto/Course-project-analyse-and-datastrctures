@@ -97,6 +97,22 @@ build CMakeFiles/Course-project-analyse-and-datastrctures.dir/igor.cpp.obj: CXX_
   OBJECT_DIR = CMakeFiles\Course-project-analyse-and-datastrctures.dir
   OBJECT_FILE_DIR = CMakeFiles\Course-project-analyse-and-datastrctures.dir
 
+build CMakeFiles/Course-project-analyse-and-datastrctures.dir/loginwindow.cpp.obj: CXX_COMPILER__Course-project-analyse-and-datastrctures_unscanned_Debug E$:/VisualStudioRepos/Course-project-analyse-and-datastrctures/loginwindow.cpp || cmake_object_order_depends_target_Course-project-analyse-and-datastrctures
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Course-project-analyse-and-datastrctures.dir\loginwindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IE:/VisualStudioRepos/Course-project-analyse-and-datastrctures/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Course-project-analyse-and-datastrctures_autogen/include -isystem A:/Programes/QT/6.10.1/mingw_64/include/QtCore -isystem A:/Programes/QT/6.10.1/mingw_64/include -isystem A:/Programes/QT/6.10.1/mingw_64/mkspecs/win32-g++ -isystem A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets -isystem A:/Programes/QT/6.10.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Course-project-analyse-and-datastrctures.dir
+  OBJECT_FILE_DIR = CMakeFiles\Course-project-analyse-and-datastrctures.dir
+
+build CMakeFiles/Course-project-analyse-and-datastrctures.dir/registerwindow.cpp.obj: CXX_COMPILER__Course-project-analyse-and-datastrctures_unscanned_Debug E$:/VisualStudioRepos/Course-project-analyse-and-datastrctures/registerwindow.cpp || cmake_object_order_depends_target_Course-project-analyse-and-datastrctures
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Course-project-analyse-and-datastrctures.dir\registerwindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IE:/VisualStudioRepos/Course-project-analyse-and-datastrctures/build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Course-project-analyse-and-datastrctures_autogen/include -isystem A:/Programes/QT/6.10.1/mingw_64/include/QtCore -isystem A:/Programes/QT/6.10.1/mingw_64/include -isystem A:/Programes/QT/6.10.1/mingw_64/mkspecs/win32-g++ -isystem A:/Programes/QT/6.10.1/mingw_64/include/QtWidgets -isystem A:/Programes/QT/6.10.1/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Course-project-analyse-and-datastrctures.dir
+  OBJECT_FILE_DIR = CMakeFiles\Course-project-analyse-and-datastrctures.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Course-project-analyse-and-datastrctures
@@ -105,7 +121,7 @@ build CMakeFiles/Course-project-analyse-and-datastrctures.dir/igor.cpp.obj: CXX_
 #############################################
 # Link the executable Course-project-analyse-and-datastrctures.exe
 
-build Course-project-analyse-and-datastrctures.exe: CXX_EXECUTABLE_LINKER__Course-project-analyse-and-datastrctures_Debug CMakeFiles/Course-project-analyse-and-datastrctures.dir/Course-project-analyse-and-datastrctures_autogen/mocs_compilation.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/main.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/menu.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/andrii.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/egor.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/igor.cpp.obj | A$:/Programes/QT/6.10.1/mingw_64/lib/libQt6Widgets.a A$:/Programes/QT/6.10.1/mingw_64/lib/libQt6Gui.a A$:/Programes/QT/6.10.1/mingw_64/lib/libQt6Core.a A$:/Programes/QT/6.10.1/mingw_64/lib/libQt6EntryPoint.a || Course-project-analyse-and-datastrctures_autogen Course-project-analyse-and-datastrctures_autogen_timestamp_deps
+build Course-project-analyse-and-datastrctures.exe: CXX_EXECUTABLE_LINKER__Course-project-analyse-and-datastrctures_Debug CMakeFiles/Course-project-analyse-and-datastrctures.dir/Course-project-analyse-and-datastrctures_autogen/mocs_compilation.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/main.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/menu.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/andrii.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/egor.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/igor.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/loginwindow.cpp.obj CMakeFiles/Course-project-analyse-and-datastrctures.dir/registerwindow.cpp.obj | A$:/Programes/QT/6.10.1/mingw_64/lib/libQt6Widgets.a A$:/Programes/QT/6.10.1/mingw_64/lib/libQt6Gui.a A$:/Programes/QT/6.10.1/mingw_64/lib/libQt6Core.a A$:/Programes/QT/6.10.1/mingw_64/lib/libQt6EntryPoint.a || Course-project-analyse-and-datastrctures_autogen Course-project-analyse-and-datastrctures_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = A:/Programes/QT/6.10.1/mingw_64/lib/libQt6Widgets.a  A:/Programes/QT/6.10.1/mingw_64/lib/libQt6Gui.a  A:/Programes/QT/6.10.1/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  A:/Programes/QT/6.10.1/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -192,7 +208,7 @@ build Course-project-analyse-and-datastrctures_autogen_timestamp_deps: phony
 #############################################
 # Utility command for Course-project-analyse-and-datastrctures_autogen
 
-build Course-project-analyse-and-datastrctures_autogen: phony CMakeFiles/Course-project-analyse-and-datastrctures_autogen Course-project-analyse-and-datastrctures_autogen/include/ui_menu.h Course-project-analyse-and-datastrctures_autogen/timestamp Course-project-analyse-and-datastrctures_autogen/mocs_compilation.cpp Course-project-analyse-and-datastrctures_autogen_timestamp_deps
+build Course-project-analyse-and-datastrctures_autogen: phony CMakeFiles/Course-project-analyse-and-datastrctures_autogen Course-project-analyse-and-datastrctures_autogen/include/ui_menu.h Course-project-analyse-and-datastrctures_autogen/include/ui_loginwindow.h Course-project-analyse-and-datastrctures_autogen/include/ui_registerwindow.h Course-project-analyse-and-datastrctures_autogen/timestamp Course-project-analyse-and-datastrctures_autogen/mocs_compilation.cpp Course-project-analyse-and-datastrctures_autogen_timestamp_deps
 
 
 #############################################
@@ -209,7 +225,7 @@ build Course-project-analyse-and-datastrctures_autogen/timestamp Course-project-
 #############################################
 # Phony custom command for CMakeFiles\Course-project-analyse-and-datastrctures_autogen
 
-build CMakeFiles/Course-project-analyse-and-datastrctures_autogen Course-project-analyse-and-datastrctures_autogen/include/ui_menu.h | ${cmake_ninja_workdir}CMakeFiles/Course-project-analyse-and-datastrctures_autogen ${cmake_ninja_workdir}Course-project-analyse-and-datastrctures_autogen/include/ui_menu.h: phony Course-project-analyse-and-datastrctures_autogen/timestamp || Course-project-analyse-and-datastrctures_autogen_timestamp_deps
+build CMakeFiles/Course-project-analyse-and-datastrctures_autogen Course-project-analyse-and-datastrctures_autogen/include/ui_menu.h Course-project-analyse-and-datastrctures_autogen/include/ui_loginwindow.h Course-project-analyse-and-datastrctures_autogen/include/ui_registerwindow.h | ${cmake_ninja_workdir}CMakeFiles/Course-project-analyse-and-datastrctures_autogen ${cmake_ninja_workdir}Course-project-analyse-and-datastrctures_autogen/include/ui_menu.h ${cmake_ninja_workdir}Course-project-analyse-and-datastrctures_autogen/include/ui_loginwindow.h ${cmake_ninja_workdir}Course-project-analyse-and-datastrctures_autogen/include/ui_registerwindow.h: phony Course-project-analyse-and-datastrctures_autogen/timestamp || Course-project-analyse-and-datastrctures_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

@@ -28,6 +28,11 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         egor.cpp
         igor.cpp
         rentdialog.h
+        loginwindow.h loginwindow.cpp loginwindow.ui
+        registerwindow.h registerwindow.cpp registerwindow.ui
+
+
+
 
 
     )

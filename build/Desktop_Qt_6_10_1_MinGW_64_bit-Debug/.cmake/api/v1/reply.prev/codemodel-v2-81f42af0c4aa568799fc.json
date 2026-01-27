@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-075d6a1894e28913b0da.json",
+					"jsonFile" : "directory-.-Debug-da104f6b35e7a26d2fbb.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Course-project-analyse-and-datastrctures::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Course-project-analyse-and-datastrctures-Debug-4363af9d63c65b0944f6.json",
+					"jsonFile" : "target-Course-project-analyse-and-datastrctures-Debug-a2e01e504bbf95815656.json",
 					"name" : "Course-project-analyse-and-datastrctures",
 					"projectIndex" : 0
 				},

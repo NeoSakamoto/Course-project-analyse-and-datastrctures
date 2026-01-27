@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 65,
+				"line" : 74,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 48,
+				"line" : 57,
 				"parent" : 0
 			},
 			{
@@ -380,18 +380,21 @@
 				1,
 				2,
 				6,
-				7
+				7,
+				8,
+				11,
+				14
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "Course-project-analyse-and-datastrctures_autogen::@6890427a1f51a3e7e1df"
+			"id" : "Course-project-analyse-and-datastrctures_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "Course-project-analyse-and-datastrctures_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "Course-project-analyse-and-datastrctures_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Course-project-analyse-and-datastrctures::@6890427a1f51a3e7e1df",
@@ -505,7 +508,10 @@
 				1,
 				2,
 				6,
-				7
+				7,
+				8,
+				11,
+				14
 			]
 		},
 		{
@@ -514,28 +520,35 @@
 			[
 				3,
 				5,
-				8
+				9,
+				10,
+				13,
+				16,
+				17,
+				18
 			]
 		},
 		{
 			"name" : "Forms",
 			"sourceIndexes" : 
 			[
-				4
+				4,
+				12,
+				15
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				9
+				19
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				10
+				20
 			]
 		}
 	],
@@ -588,9 +601,64 @@
 			"sourceGroupIndex" : 0
 		},
 		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "igor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "RentDialog.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "loginwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "loginwindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "loginwindow.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "registerwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "registerwindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "registerwindow.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Course-project-analyse-and-datastrctures_autogen/include/ui_menu.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Course-project-analyse-and-datastrctures_autogen/include/ui_loginwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_10_1_MinGW_64_bit-Debug/Course-project-analyse-and-datastrctures_autogen/include/ui_registerwindow.h",
 			"sourceGroupIndex" : 1
 		},
 		{
